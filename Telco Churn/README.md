@@ -12,20 +12,23 @@ The dataset comes from [Kaggle: Telco Customer Churn](https://www.kaggle.com/dat
 ## Methodology
 
 **<u>1. Data Investigation</u>**
-    - An small-to-mid sized imbalanced dataset, with lower number of churned customers $\longrightarrow$ Stratified K-Fold CV
-    - Imputation of `TotalCharges`
-    - Column datatype transformation
+- An small-to-mid sized imbalanced dataset, with lower number of churned customers $\longrightarrow$ Stratified K-Fold CV
+- Imputation of `TotalCharges`
+- Column datatype transformation
+    
 **<u>2. Feature Engineering</u>**
-    - `MonthlyCharges_per_tenure` is created as a result of EDA
-    - Binary Features are created for those having multiple options
+- `MonthlyCharges_per_tenure` is created as a result of EDA
+- Binary Features are created for those having multiple options
+    
 **<u>3. Data Preprocessing</u>**
-    - `PowerTransformation` with `yeo-johnson` method is used as one of the columns is not right-skewed
-    - Standard Scaling is used
-    - One Hot Encoding (OHE) is applied to nominal categorical features
+- `PowerTransformation` with `yeo-johnson` method is used as one of the columns is not right-skewed
+- Standard Scaling is used
+- One Hot Encoding (OHE) is applied to nominal categorical features
+    
 **<u>4. Model Training and Evaluation</u>**
-    - Models are scored based on **ROC AUC**
-    - Custom pipelines are integrated depending on the model
-    - 10-Fold Stratified CV is used
+- Models are scored based on **ROC AUC**
+- Custom pipelines are integrated depending on the model
+- 10-Fold Stratified CV is used
 
 **Models Trained and Evaluated**
 
